@@ -1,0 +1,61 @@
+<div class="channel">
+  <div class="header">
+    <div class="media">
+      <div class="media-left">
+        <img class="icon" src="/dist/img/channel.png">
+      </div>
+      <div class="media-body">
+        <a href="#" id="channel-header">
+          <h2 class="pointer">Channel Name&nbsp;<i class="fa fa-angle-down"></i></h2>
+        </a>
+        <span class="text-muted">
+          <i class="fa fa-star-o"></i>
+          &nbsp;|&nbsp;<i class="fa fa-user-o"></i>&nbsp;42
+          &nbsp;|&nbsp;Channel description
+        </span>
+      </div>
+    </div>
+
+    <div id="channel-menu" class="menu">
+
+      <a class="action" href="#">Invite Members to Channel</a>
+      <a class="action" href="#">Channel Members</a>
+      <a class="action" href="#">Channel Settings</a>
+
+      <div class="dropdown-divider"></div>
+
+      <a class="action" href="#">Notification Preferences</a>
+      <a class="action" href="#">Mute Channel</a>
+
+      <div class="dropdown-divider"></div>
+
+      <a class="action" href="#">Leave Channel</a>
+    </div>
+  </div>
+
+  <% for (let i = 0; i < 100; i ++) { -%>
+  <div class="message">
+    <a class="media-left" href="#">
+      <img class="icon" src="/dist/img/user.png">
+    </a>
+
+    <div class="media-body">
+      <div>
+        <a href="#"><b>Your name here</b></a>
+        <span>
+          &nbsp;<a href="#" class="text-muted">17:42</a>
+          &nbsp;<a href="#"><i class="fa fa-star-o text-muted"></i></a>
+        </span>
+      </div>
+      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+  </div>
+  <% } -%>
+
+  <div class="footer">
+    <div class="input-group">
+      <a href="#" class="input-group-addon text-muted"><i class="fa fa-plus"></i></a>
+      <input type="text" class="form-control" placeholder="Channel Message">
+    </div>
+  </div>
+</div>

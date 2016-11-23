@@ -1,0 +1,38 @@
+{
+  "name": "glow",
+  "version": "0.0.1",
+  "description": "A zero-knowledge group chat service that runs on Refract",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "electron .",
+    "cover": "rm -Rf docs/coverage && istanbul cover _mocha",
+    "doc": "rm -rf docs/jsdoc && jsdoc -c .jsdoc.json lib",
+    "lint": "eslint lib/*.js lib/**/*.js bin/* test/*.js",
+    "report": "coveralls < ./docs/coverage/lcov.info",
+    "scss": "node-sass --output dist/css src/scss/main.scss",
+    "site": "bundle install && cd docs && bundle exec jekyll serve",
+    "clean": "rm -rf dist/css docs/jsdoc docs/coverage docs/_site docs/.sass-cache"
+  },
+  "author": "John Manero <john.manero@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.14",
+    "electron": "^1.4.7",
+    "eslint": "^3.9.1",
+    "eslint-config-rapid7": "^2.6.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.6.0",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.4.3",
+    "mocha": "^3.1.2",
+    "node-sass": "^3.13.0",
+    "sass-lint": "^1.10.2"
+  },
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "mime": "^1.3.4"
+  }
+}
