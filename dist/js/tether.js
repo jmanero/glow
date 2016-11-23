@@ -1,5 +1,8 @@
-/*! tether 1.3.7 */
-
+/*!
+ * tether 1.3.7
+ * Copyright (c) 2014-2016 HubSpot, Inc.
+ * Licensed under MIT (https://github.com/HubSpot/tether/blob/master/LICENSE)
+ */
 (function(root, factory) {
   root.Tether = factory();
 }(this, function(require, exports, module) {
