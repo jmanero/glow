@@ -1,0 +1,201 @@
+/**
+ * Main Stylesheet
+ */
+$fa-font-path: '/dist/fonts';
+
+$spacer: .25rem;
+
+$font-size-h1: 1.5rem;
+$font-size-h2: 1rem;
+$font-size-h3: .75rem;
+$font-size-h4: .5rem;
+$font-size-h5: .25rem;
+$font-size-h6: .125rem;
+
+$font-size-base: .75rem;
+$font-size-lg:   1rem;
+$font-size-sm:   .75rem;
+$font-size-xs:   .5rem;
+
+@import 'bootstrap/bootstrap';
+@import 'font-awesome/font-awesome';
+
+/* Colors */
+$nav-primary: #303E4D;
+$nav-secondary: #2C3849;
+$nav-active: #6698C8;
+$nav-text: #FFFFFF;
+$nav-hover: #4A5664;
+
+/* Layout Heights */
+$height-drag: 1.25rem;
+$height-header: 4.5rem;
+$height-footer: 3.75rem;
+
+a, a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+.drag {
+  -webkit-app-region: drag;
+
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  height: $height-drag;
+  width: 100vw;
+}
+
+.header {
+  padding-top: $height-drag;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  height: $height-header;
+}
+
+.icon {
+  @extend .rounded;
+
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.menu {
+  @extend .dropdown-menu;
+
+  margin-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .media {
+    margin-left: 1rem;
+  }
+
+  .dropdown-divider {
+    margin: 1rem;
+  }
+
+  .action {
+    @extend .dropdown-item;
+
+    color: #000000;
+  }
+
+  .action:hover {
+    color: $nav-text;
+    background-color: $nav-hover;
+  }
+}
+
+.channel {
+  color: #000000;
+  background-color: #FFFFFF;
+
+  height: 100vh;
+  max-height: 100vh;
+
+  padding-top: $height-header;
+  padding-bottom: $height-footer;
+
+  clear: none;
+  overflow-y: scroll;
+
+  a {
+    color: #000000;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+
+    background-color: #FFFFFF;
+
+    .icon {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  .message {
+    @extend .media;
+
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 8rem;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+
+    padding-top: .25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    height: $height-footer;
+
+    background-color: #FFFFFF;
+  }
+}
+
+.navigation {
+  color: $nav-text;
+  background-color: $nav-primary;
+
+  height: 100vh;
+  width: 16rem;
+
+  clear: none;
+  float: left;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  a {
+    color: $nav-text;
+  }
+
+  a:hover {
+    color: $nav-text;
+  }
+
+  .header {
+    @extend .dropdown;
+  }
+
+  .header:hover {
+    background-color: $nav-secondary;
+  }
+
+  .group {
+    @extend .card-block;
+  }
+
+  .item {
+    @include border-radius($border-radius);
+
+    float:left;
+    clear:left;
+
+    width: 100%;
+    padding-left: 1rem;
+    padding-top: .125rem;
+    padding-bottom: .125rem;
+  }
+
+  .active {
+    background-color: $nav-active;
+  }
+
+  .item:hover {
+    color: $nav-text;
+    background-color: $nav-hover;
+  }
+}
